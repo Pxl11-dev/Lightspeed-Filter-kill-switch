@@ -1,0 +1,9 @@
+@echo off
+color 0a
+tite Filter
+echo What's up? Buckle up, because your taking a risk in your own hands!
+Pause. >nul | echo.Do you risk that you could be violating policies in your county?
+CHOICE /c YN /n /m "Are you sure you want to continue with the download? (Y/N)"
+IF %errorlevel% LEQ 1 (echo "Well, you risked it. Note that I am not responsible for any disiplinary that you get.") ELSE (EXIT)
+echo Getting ready...
+echo Downloading and installing...
