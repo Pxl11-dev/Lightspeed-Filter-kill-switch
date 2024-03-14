@@ -6,4 +6,6 @@ Pause. >nul | echo.Do you risk that you could be violating policies in your coun
 CHOICE /c YN /n /m "Are you sure you want to continue with the download? (Y/N)"
 IF %errorlevel% LEQ 1 (echo "Well, you risked it. Note that I am not responsible for any disiplinary that you get.") ELSE (EXIT)
 echo Getting ready...
+timeout 1 > nul
 echo Downloading and installing...
+timeout 1 > nul
