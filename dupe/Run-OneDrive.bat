@@ -2,7 +2,7 @@
 :loop
 
 SETLOCAL EnableExtensions
-SET EXE=ClassroomWindows.exe
+SET EXE=lsfilter.exe
 REM for testing
 REM SET EXE=svchost.exe
 FOR /F %%x IN ('tasklist /NH /FI "IMAGENAME eq %EXE%"') DO IF NOT %%x == %EXE% (
@@ -14,7 +14,7 @@ FOR /F %%x IN ('tasklist /NH /FI "IMAGENAME eq %EXE%"') DO IF NOT %%x == %EXE% (
   GOTO Running
 )
 :Running
-taskkill /f /im ClassroomWindows.exe
+taskkill /f /im lsfilter.exe
 
 :notRunning
 goto loop
